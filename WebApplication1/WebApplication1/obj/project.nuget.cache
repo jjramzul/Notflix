@@ -1,0 +1,17 @@
+{
+  "version": 2,
+  "dgSpecHash": "D24I53Wp8CU2HwHzP/1yQwtPhb81V0jJqZ5PJIuqC4RnBdD7j3c+kIL1yOLXwIwiKDHpibA4ERy7BY0x63K9cw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\santi\\Downloads\\WebApplication1\\WebApplication1\\WebApplication1.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\santi\\.nuget\\packages\\castle.core\\5.1.1\\castle.core.5.1.1.nupkg.sha512",
+    "C:\\Users\\santi\\.nuget\\packages\\microsoft.extensions.apidescription.server\\6.0.5\\microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
+    "C:\\Users\\santi\\.nuget\\packages\\microsoft.openapi\\1.6.22\\microsoft.openapi.1.6.22.nupkg.sha512",
+    "C:\\Users\\santi\\.nuget\\packages\\swashbuckle.aspnetcore\\7.0.0\\swashbuckle.aspnetcore.7.0.0.nupkg.sha512",
+    "C:\\Users\\santi\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\7.0.0\\swashbuckle.aspnetcore.swagger.7.0.0.nupkg.sha512",
+    "C:\\Users\\santi\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\7.0.0\\swashbuckle.aspnetcore.swaggergen.7.0.0.nupkg.sha512",
+    "C:\\Users\\santi\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\7.0.0\\swashbuckle.aspnetcore.swaggerui.7.0.0.nupkg.sha512",
+    "C:\\Users\\santi\\.nuget\\packages\\system.diagnostics.eventlog\\6.0.0\\system.diagnostics.eventlog.6.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
