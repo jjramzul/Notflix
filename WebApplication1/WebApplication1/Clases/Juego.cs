@@ -4,11 +4,11 @@
     {
         public enum Genero
         {
-            Mounstruos,
-            Paranormal,
-            Psicologico,
-            Killer,
-            Gore
+            Drama,
+            Infantil,
+            Comedia,
+            Terror,
+            Accion
         }
 
         private string nombre;

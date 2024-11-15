@@ -4,21 +4,19 @@ namespace WebApplication1.Clases
 {
     public class Usuario
     {
-        private int id;
+        private Guid id;
         private string nombre;
         private DateOnly fecha_inicio;
 
-        private string correoElectronico;
+        
 
-        public Usuario(int id, string nombre, DateOnly fecha_inicio, string correoElectronico)
+        public Usuario(string nombre, DateOnly fecha_inicio)
         {
-            this.id = id;
+            Id = Guid.NewGuid(); // Genera un ID único para cada instancia
             this.nombre = nombre;
             this.fecha_inicio = fecha_inicio;
-            this.CorreoElectronico = correoElectronico;
         }
 
-        public int Id { get => id; set => id = value; }
         public string Nombre { get => nombre; 
             set
             {
@@ -33,6 +31,6 @@ namespace WebApplication1.Clases
             }
         }
 
-        public string CorreoElectronico { get => correoElectronico; set => correoElectronico = value; }
+        public Guid Id { get => id; private set => id = value; }
     }
 }

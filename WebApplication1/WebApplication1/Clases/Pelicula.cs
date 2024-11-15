@@ -1,13 +1,15 @@
 ﻿namespace WebApplication1.Clases
 {
-    internal class Pelicula : Contenido
+    public class Pelicula : Contenido
     {
+        private Guid id;
         private int duracion_min;
         private byte calificacion;
 
         //Costructor
         public Pelicula(string link, string nombre, int duracion_min, byte calificacion) : base(nombre, link)
         {
+            Id = Guid.NewGuid(); // Genera un ID único para cada instancia
             Nombre = nombre;
             Link = link;
             this.Duracion_min = duracion_min;
@@ -28,6 +30,6 @@
                 calificacion = (value >= 1 && value <= 5) ? value : throw new Exception("La calificacion debe estar entre 1 y 5");
             }
         }
-        
+        public Guid Id { get => id; private set => id = value; }
     }
 }

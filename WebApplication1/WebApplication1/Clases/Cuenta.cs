@@ -6,33 +6,39 @@
         private List<Contenido> l_Contenido_visto;
 
         private string correoElectronico;
+        private string contrasena;
         private const int MaxUsuarios = 5;
 
-        public Cuenta(string correoElectronico)
+        public Cuenta(string correoElectronico, string contrasena)
         {
-            this.CorreoElectronico = correoElectronico;
-            this.l_usuarios = new List<Usuario>();
+            this.contrasena = contrasena;
+            this.correoElectronico = correoElectronico;
+            this.L_usuarios = new List<Usuario>()
+            {
+                new Usuario("Usuario 1", DateOnly.FromDateTime(DateTime.Now)),
+                new Usuario("Usuario 2", DateOnly.FromDateTime(DateTime.Now)),
+                new Usuario("Usuario 3", DateOnly.FromDateTime(DateTime.Now)),
+                new Usuario("Usuario 4", DateOnly.FromDateTime(DateTime.Now)),
+                new Usuario("Usuario 5", DateOnly.FromDateTime(DateTime.Now))
+            };
         }
 
         public string CorreoElectronico { get => correoElectronico; set => correoElectronico = value; }
+        public List<Usuario> L_usuarios { get => l_usuarios; set => l_usuarios = value; }
+        public List<Contenido> L_Contenido_visto { get => l_Contenido_visto; set => l_Contenido_visto = value; }
+        public string Contrasena { get => contrasena; set => contrasena = value; }
 
         public void AgregarUsuario(Usuario usuario)
         {
             // Validamos que el número de usuarios no exceda el máximo de 5 por cuenta
-            if (l_usuarios.Count >= MaxUsuarios)
+            if (L_usuarios.Count >= MaxUsuarios)
             {
                 throw new Exception("No se pueden agregar más de 5 usuarios a la cuenta.");
             }
             else
-            {
-                // Verificamos que el correo electrónico del usuario coincida con el de la cuenta
-                if (usuario.CorreoElectronico != correoElectronico)
-                {
-                    throw new Exception("El correo electrónico del usuario debe coincidir con el de la cuenta.");
-                }
-
+            {  
                 // Agregamos el usuario a la lista
-                l_usuarios.Add(usuario);
+                L_usuarios.Add(usuario);
             }
         }
     }

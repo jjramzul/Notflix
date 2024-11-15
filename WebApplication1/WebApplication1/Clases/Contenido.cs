@@ -16,18 +16,18 @@
             TotalContenido++;  // Incrementa cada vez que se crea una instancia
         }
 
-        protected string Nombre { get => nombre; 
+        public string Nombre { get => nombre; 
             set
             {
                 //verifico q el nombre no est vacio
                 nombre = !string.IsNullOrWhiteSpace(value) ? value : throw new Exception("El nombre no puede esta vacio");
             }
         }
-        protected string Link { get => link;
+        public string Link { get => link;
             set
             {
                 //verifico que el link tenga por lo menos un punto
-                link = (value.Contains('.') && value.Length >= 4) ? value : throw new Exception("El link debe contener un punto seguido de 2 a 3 letras, como '.com' o '.io'. y luego su id(id opcional)");
+                link = (value.Length >= 4) ? value : throw new Exception("El link debe contener un punto seguido de 2 a 3 letras, como '.com' o '.io'. y luego su id(id opcional)");
             }
         }
 
